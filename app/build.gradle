@@ -61,7 +61,7 @@ dependencies {
     implementation "androidx.navigation:navigation-ui:$nav_version"
 
     implementation platform('com.google.firebase:firebase-bom:28.4.0')
-
+    implementation 'com.google.firebase:firebase-firestore'
     /*add Hilt dependencies-------------------------------------------------------*/
     implementation 'com.google.dagger:hilt-android:2.38.1'
     annotationProcessor 'com.google.dagger:hilt-compiler:2.38.1'
@@ -73,5 +73,13 @@ dependencies {
     // ExoPlayer
     implementation "com.google.android.exoplayer:exoplayer-core:2.11.8"
     implementation "com.google.android.exoplayer:exoplayer-ui:2.11.8"
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.11.8'
+    implementation 'com.google.android.exoplayer:exoplayer-hls:2.11.8'
     implementation "com.google.android.exoplayer:extension-mediasession:2.11.8"
+
+    // 여기부터 추가
+    // PreferenceManager
+    implementation 'androidx.preference:preference:1.1.1'
+    // annotations (nonnull 사용)
+    implementation 'com.android.support:support-annotations:28.0.0'
 }

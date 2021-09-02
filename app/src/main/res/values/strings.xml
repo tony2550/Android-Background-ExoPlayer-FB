@@ -2,4 +2,47 @@
     <string name="app_name">Clone-Spotify</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fragment_media_controller">MediaControllerFragment</string>
+    <string name="fragment_home">HomeFragment</string>
+    <string name="fragment_category">CategoryFragment</string>
+    <string name="fragment_playlist">PlaylistFragment</string>
+    <string name="fragment_library">LibraryFragment</string>
+
+    <!-- Firestore collections -->
+    <string name="collection_songs">songs</string>
+
+    <!-- Firestore documents  -->
+    <string name="document_test_song1">test_song1</string>
+    <string name="document_test_song2">test_song2</string>
+    <string name="document_test_song3">test_song3</string>
+    <string name="document_test_song4">test_song4</string>
+
+    <!-- Firestore Fields -->
+    <string name="field_media_id">mediaid</string>
+    <string name="field_media_url">songUrl</string>
+    <string name="field_artist">subtitle</string>
+    <string name="field_description">description</string>
+    <string name="field_title">title</string>
+    <string name="field_image_url">imageUrl</string>
+
+
+    <!-- Broadcast Receivers -->
+    <string name="broadcast_seekbar_update">broadcast_seekbar_update</string>
+    <string name="broadcast_seekbar_value">broadcast_seekbar_value</string>
+    <string name="broadcast_update_ui">broadcast_update_ui</string>
+    <string name="broadcast_new_media_id">broadcast_new_media_id</string>
+
+    <string name="string_remove_from_playlist">Remove from playlist?</string>
+    <string name="string_yes">yes</string>
+    <string name="string_no">no</string>
+    <string name="label_stop">Stop</string>
+    <string name="label_pause">Pause</string>
+    <string name="label_play">Play</string>
+    <string name="label_play_pause">Play and pause toggle</string>
+    <string name="label_previous">Previous track</string>
+    <string name="label_next">Next track</string>
+
+
+
+    <string name="categories">Categories</string>
 </resources>

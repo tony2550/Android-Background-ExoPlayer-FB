@@ -5,56 +5,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    tools:context=".view.MainActivity"
+    android:background="@color/black">
 
-    <androidx.fragment.app.FragmentContainerView
-        android:layout_above="@id/playBar"
-        android:id="@+id/nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph" />
+        android:id="@+id/main_container"
+        android:layout_marginBottom="10dp"
+        android:layout_above="@+id/bottom_media_controller">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_nav"
-        style="@style/Widget.App.BottomNavigationView"
+    </FrameLayout>
+
+
+    <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="start"
-        android:layout_marginBottom="1dp"
-        app:menu="@menu/drawer_bottom_nav_menu" />
+        android:id="@+id/bottom_media_controller"
+        android:name="com.com.clone_spotify.view.fragments.MediaControllerFragment">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:id="@+id/playBar"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_above="@id/bottom_nav"
-        android:background="@drawable/layout_border"
-        android:orientation="horizontal">
+    </fragment>
 
-        <ImageView
-            android:id="@+id/ivCurSongImage"
-            android:layout_width="56dp"
-            android:layout_height="match_parent"
-            app:srcCompat="@drawable/billiecover1" />
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress_bar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
-        <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/vpSong"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginStart="5dp"
-            android:layout_marginEnd="5dp" />
-
-        <ImageView
-            android:id="@+id/ivPlayPause"
-            app:srcCompat="@drawable/ic_play"
-            android:layout_width="56dp"
-            android:layout_height="match_parent"/>
-
-
-    </androidx.appcompat.widget.LinearLayoutCompat>
 
 </RelativeLayout>

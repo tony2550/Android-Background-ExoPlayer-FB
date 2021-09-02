@@ -3,6 +3,7 @@
     package="com.com.clone_spotify">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:name=".SpotifyApplication"
@@ -14,7 +15,9 @@
         android:theme="@style/Theme.CloneSpotify">
         <activity android:name=".view.auth.LoginActivity" />
         <activity android:name=".view.auth.JoinActivity" />
-        <activity android:name=".view.MainActivity">
+        <activity android:name=".view.MainActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:configChanges="orientation">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,9 +25,17 @@
             </intent-filter>
         </activity>
         <service
-            android:name=".exoplayer.MusicService"
-            android:enabled="true"
-            android:exported="true" />
+            android:name=".service.MusicService">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+        </service>
+
+        <receiver android:name="androidx.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
